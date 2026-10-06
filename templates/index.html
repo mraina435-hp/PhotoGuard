@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>PhotoGuard</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: bisque;
+            text-align: center;
+        }
+
+        .header {
+            padding: 35px 20px 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        input[type="file"] {
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        button {
+            border: none;
+            padding: 12px 22px;
+            margin: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: gainsboro;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+        }
+
+        .menu {
+            margin-top: 20px;
+        }
+
+        .security {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .container {
+                margin: 20px;
+                padding: 10px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            input[type="file"] {
+                width: 100%;
+            }
+
+            button {
+                width: 90%;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📸 PhotoGuard</h1>
+        <p class="subtitle">
+            Protect and verify your photos securely 🔐
+        </p>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h2>🔐 Protect Your Photo</h2>
+            <p>
+                Upload your photo to create a unique
+                SHA-256 security fingerprint.
+            </p>
+            <form action="/protect"
+                  method="POST"
+                  enctype="multipart/form-data">
+
+                <input type="file"
+                       name="photo"
+                       accept="image/*"
+                       required>
+
+                <br>
+
+                <button type="submit">
+                    🔐 Protect My Photo
+                </button>
+
+            </form>
+
+
+            <div class="menu">
+
+                <a href="/verify">
+
+                    <button>
+                        🔍 Verify Photo
+                    </button>
+
+                </a>
+
+
+                <a href="/history">
+
+                    <button>
+                        📜 Verification History
+                    </button>
+
+                </a>
+                <br><br>
+
+                <a href="/about">
+                    <button>
+                        About PhotoGuard
+                    </button>
+                </a>
+                <br><br>
+                <a href="/help">
+                    ❓Help
+                </a>
+
+
+
+            </div>
+
+
+            <div class="security">
+
+                🛡️ SHA-256 Based Photo Verification
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

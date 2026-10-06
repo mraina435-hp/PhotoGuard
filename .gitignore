@@ -1,0 +1,11 @@
+uploads/
+
+photo_records.json
+
+verification_history.json
+
+venv/
+
+__pycache__/
+
+.env
